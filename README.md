@@ -7,8 +7,6 @@
 <p align="left">
     <img src="https://komarev.com/ghpvc/?username=anga205&label=Profile%20views&color=0e75b6&style=flat" alt="anga205" />
 </p>
-
-<hr>
 <hr>
 <h3 align="center">Languages:</h3>
 <p align="center">
