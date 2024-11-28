@@ -24,12 +24,7 @@
 </p>
 <hr>
 <p align="center">
-    <img src="https://github-readme-stats.vercel.app/api?username=anga205&show_icons=true&locale=en&theme=tokyonight&hide=stars&show=prs_merged_percentage" alt="anga205" width="70%"/>
-</p>
-
-<p align="center">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Anga205&theme=tokyonight&border_radius=10&fire=DD2727" alt="anga205" width="70%"/>
-</p>
-<p align="center">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=anga205&layout=compact&theme=tokyonight" alt="anga205" width="70%"/>
+    <img src="https://github-readme-stats.vercel.app/api?username=anga205&show_icons=true&locale=en&theme=tokyonight&hide=stars&show=prs_merged_percentage" alt="anga205" width="35.5%"/>
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Anga205&theme=tokyonight&border_radius=10&fire=DD2727" alt="anga205" width="37%"/>
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=anga205&layout=compact&theme=tokyonight" alt="anga205" width="26.5%"/>
 </p>
