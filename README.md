@@ -9,12 +9,6 @@
 </p>
 
 <hr>
-<h3 align="center">Connect with me:</h3>
-<p align="center">
-    <a href="https://twitter.com/_anga205" target="blank">
-        <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="_anga205" height="30" width="40" />    </a>    <a href="https://linkedin.com/in/angad-bhalla-430713249" target="blank">        <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="angad-bhalla-430713249" height="30" width="40" />    </a>    <a href="https://instagram.com/_anga205" target="blank">        <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="_anga205" height="30" width="40" />    </a>    <a href="https://www.hackerrank.com/angadbhalla2005" target="blank">        <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="angadbhalla2005" height="30" width="40" />    </a>    <a href="mailto:sayhi@angadbhalla.com?subject=Hey%20I%20thought%20your%20github%20profile%20is%20really%20cool!" target="blank">        <img align="center" src="https://cdn.anga.pro/i/562f2e74d3b9.png" alt="sayhi@angadbhalla.com" height="30" width="40" />    </a>
-
-</p>
 <hr>
 <h3 align="center">Languages:</h3>
 <p align="center">
