@@ -1,5 +1,5 @@
 <h1 align="center">Hello there, I'm Anga!</h1>
-<img align="right" img width="25%" alt="Angad" src="https://cloud.anga.pro/i/do9j3t4fbqtu/me.png">
+<img align="right" img width="25%" alt="Angad" src="https://cloud.anga.pro/i/i8vzklenxe3s/me.png">
 
 ### About me
 
