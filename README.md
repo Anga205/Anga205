@@ -15,7 +15,7 @@
     <a href="mailto:sayhi@angadbhalla.com"><img src="https://img.shields.io/badge/Email-red?style=flat-square&logo=gmail&logoColor=white"></a>
     <a href="https:///instagram.com/_anga205"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white"></a>
     <a href="https:///reddit.com/u/anga205"><img src="https://img.shields.io/badge/Reddit-FF4500?style=flat-square&logo=reddit&logoColor=white"></a>
-    <a href="https:///leetcode.com/"><img src="https://img.shields.io/badge/Leetcode-332244?style=flat-square&logo=leetcode&logoColor=white"></a>
+    <a href="https://leetcode.com/u/Anga205"><img src="https://img.shields.io/badge/Leetcode-332244?style=flat-square&logo=leetcode&logoColor=white"></a>
 </p>
 
 ---
