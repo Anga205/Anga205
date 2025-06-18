@@ -1,6 +1,6 @@
 from PIL import Image
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from github_functions import get_total_contributions
 import html
 
@@ -23,7 +23,8 @@ def get_age_line(timestamp):
     return f"{output}{age}"
 
 def get_last_updated_line():
-    timestamp = datetime.now().strftime('%Y-%m-%d %I:%M:%S %p %Z')[:-1]
+    ist_timezone = timezone(timedelta(hours=5, minutes=30))
+    timestamp = datetime.now(ist_timezone).strftime('%d-%m-%Y %I:%M:%S %p')
     output = f"• Last Updated: "
     while (len(output) + len(timestamp)) < 60:
         output += "."

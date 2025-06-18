@@ -3,7 +3,7 @@ import os
 import time
 from datetime import datetime
 
-def get_total_contributions(username: str="Anga205", token: str=os.getenv("GITHUB_TOKEN"), start_year: int=2020) -> int:
+def get_total_contributions(username: str="Anga205", token: str=os.getenv("PERSONAL_ACCESS_TOKEN"), start_year: int=2020) -> int:
     """
     Gets the total number of contributions for a user from a given start year to the present.
     This is done by fetching contributions one year at a time.

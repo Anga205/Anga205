@@ -1,0 +1,36 @@
+name: README build
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 0 * * *"
+    - cron: "0 12 * * *"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - name: Get Python 3.11
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Update README file
+        env:
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: python asciiart.py profile_picture.png 50 image.svg
+      - name: Commit
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |-
+          git add .
+          git diff
+          git config --global user.email "github-actions-bot@angadbhalla.com"
+          git config --global user.name "Anga205/GitHub-Actions-Bot"
+          git commit -m "Updated README" -a || echo "No changes to commit"
+          git push
