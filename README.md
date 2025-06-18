@@ -1,1 +1,1 @@
-<img src="image.svg" style="width:100%; border: 1px solid white; border-radius: 5px; padding: 2px;">
+<img src="image.svg">

@@ -93,6 +93,11 @@ def image_to_ascii_svg(image_path, output_path="output.svg", new_width=100):
     width, height = image.size
     pixels = image.load()
 
+    FONT_SIZE = 10
+    PADDING = 5
+    BORDER_WIDTH = 1
+    CORNER_RADIUS = 5
+
     svg_width = width * FONT_SIZE
     svg_height = height * FONT_SIZE
     sidebar_width = FONT_SIZE * 40  # Space for INFO block
@@ -108,13 +113,23 @@ def image_to_ascii_svg(image_path, output_path="output.svg", new_width=100):
     max_info_width = max(len(line) for line in info_lines) * (info_font_size * 0.6)  # Estimate width per character
     sidebar_width = max(sidebar_width, max_info_width + FONT_SIZE * 4)  # Ensure enough space
 
+    total_width = svg_width + sidebar_width + 2 * PADDING
+    total_height = svg_height + 2 * PADDING
+
     # Start SVG
     svg_lines = []
     svg_lines.append(
         f'<svg xmlns="http://www.w3.org/2000/svg" '
-        f'width="{svg_width + sidebar_width}" height="{svg_height}" '
-        f'viewBox="0 0 {svg_width + sidebar_width} {svg_height}" '
+        f'width="{total_width}" height="{total_height}" '
+        f'viewBox="0 0 {total_width} {total_height}" '
         f'style="background:#171717">'
+    )
+
+    # Add border and background
+    svg_lines.append(
+        f'<rect x="{PADDING/2}" y="{PADDING/2}" width="{total_width - PADDING}" height="{total_height - PADDING}" '
+        f'rx="{CORNER_RADIUS}" ry="{CORNER_RADIUS}" '
+        f'fill="#171717" stroke="white" stroke-width="{BORDER_WIDTH}"/>'
     )
 
     # Style for both blocks
@@ -131,17 +146,17 @@ def image_to_ascii_svg(image_path, output_path="output.svg", new_width=100):
             char = pixel_to_ascii(r, g, b, a)
             if char != " ":
                 fill = f"rgb({r},{g},{b})" if a != 0 else "rgb(0,0,0)"
-                xpos = x * FONT_SIZE
-                ypos = y * FONT_SIZE
+                xpos = x * FONT_SIZE + PADDING
+                ypos = y * FONT_SIZE + PADDING
                 svg_lines.append(
                     f'<text x="{xpos}" y="{ypos}" fill="{fill}" font-size="{FONT_SIZE}px" text-anchor="middle">{char}</text>'
                 )
 
     # Render INFO block
-    info_x = svg_width + FONT_SIZE * 2  # padding from ASCII art
+    info_x = svg_width + FONT_SIZE * 2 + PADDING  # padding from ASCII art
 
     for i, line in enumerate(info_lines):
-        y_pos = int((i + 0.5) * line_height)
+        y_pos = int((i + 0.5) * line_height) + PADDING
 
         if i == 0 and '@' in line:
             at_index = line.find('@')
