@@ -85,11 +85,68 @@ def get_total_contributions(username: str="Anga205", token: str=os.getenv("PERSO
     except (KeyError, TypeError):
         return -1
 
+def get_total_repos(username: str="Anga205", token: str=os.getenv("PERSONAL_ACCESS_TOKEN")) -> int:
+    """
+    Gets the total number of public and private repositories for a user.
+
+    Args:
+        username (str): The GitHub username.
+        token (str): A GitHub personal access token. A token with 'read:user' scope
+                        is required to access repository data.
+
+    Returns:
+        int: The total number of repositories, or -1 if an error occurs.
+    """
+    if not token:
+        return -1
+
+    headers = {
+        "Authorization": f"bearer {token}",
+        "Content-Type": "application/json"
+    }
+
+    query = """
+    query($username: String!) {
+        user(login: $username) {
+        repositories {
+            totalCount
+        }
+        }
+    }
+    """
+
+    variables = {
+        "username": username
+    }
+
+    graphql_url = "https://api.github.com/graphql"
+
+    try:
+        response = requests.post(
+            graphql_url,
+            headers=headers,
+            json={"query": query, "variables": variables}
+        )
+        response.raise_for_status()
+        data = response.json()
+
+        if "errors" in data:
+            return -1
+
+        user_data = data.get('data', {}).get('user')
+        if not user_data:
+            return -1
+
+        total_repos = user_data['repositories']['totalCount']
+        return total_repos
+
+    except requests.exceptions.RequestException:
+        return -1
+    except (KeyError, TypeError):
+        return -1
 
 if __name__ == "__main__":
-    total_contributions = get_total_contributions()
-    
-    if total_contributions != -1:
-        print(f"{total_contributions}")
-    else:
-        print("\nFailed to retrieve contribution count.")
+    repositories = get_total_repos()
+    contributions = get_total_contributions()
+    print(f"Total Repositories: {repositories}")
+    print(f"Total Contributions: {contributions}")

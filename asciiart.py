@@ -1,8 +1,9 @@
 from PIL import Image
 import sys
 from datetime import datetime, timezone, timedelta
-from github_functions import get_total_contributions
+from github_functions import get_total_contributions, get_total_repos
 import html
+from leetcode_functions import get_leetcode_solves, get_leetcode_ranking
 
 # ASCII characters from darkest to lightest
 ASCII_CHARS = "@%#*+=-:. "
@@ -30,19 +31,43 @@ def get_last_updated_line():
         output += "."
     return f"{output}{timestamp}"
 
-def get_git_contributions():
+def get_github_stats():
     contributions = f"{get_total_contributions():,}"
     output = "• Github Contributions: "
     while (len(output) + len(contributions)) < 60:
         output += "."
-    return f"{output}{contributions}"
+    output += f"{contributions}\n"
+    repositories = f"{get_total_repos():,}"
+    output += "• Github Repositories: "
+    while (len(output) + len(repositories)) <= 120:
+        output += "."
+    output += f"{repositories}"
+    return output
+
+def get_leetcode_stats():
+    solves = get_leetcode_solves()
+    solves_str = f"{solves:,}"
+
+    ranking = get_leetcode_ranking()
+    ranking_str = f"{ranking:,}"
+
+    output = "• LeetCode Solves: "
+    while (len(output) + len(solves_str)) < 60:
+        output += "."
+    output += f"{solves_str}\n"
+
+    output += "• LeetCode Ranking: "
+    while (len(output) + len(ranking_str)) <= 120:
+        output += "."
+    output += f"{ranking_str}"
+
+    return output
 
 INFO = f"""
 Angad@Bhalla
 ————————————————————————————————————————————————————————————
 • OS: .............................Debian 12, Android, Linux
 {get_age_line(1117650600)}
-• Host: ....................................Bangalore, India
 • IDE: ...................................Visual Studio Code
 • Portfolio: .............................https://anga.codes
 
@@ -54,14 +79,16 @@ Angad@Bhalla
 • Web.Tools: .....................Vite, Next.js, TailwindCSS
 • Backend.Frameworks: .......Gin, FastAPI, Django, ExpressJS
 
-———————————————————————— Contact ———————————————————————————
+————————————————————————— Contacts —————————————————————————
 • Email: ..............................sayhi@angadbhalla.com
-• Linkedin: ....................https://linkedin.com/in/anga
+• Linkedin: .................https://linkedin.com/in/anga205
 • Instagram: ......................................@_anga205
 • Discord: .........................................@anga205
+• Reddit: .........................................u/anga205
 
 —————————————————————————— Stats ———————————————————————————
-{get_git_contributions()}
+{get_github_stats()}
+{get_leetcode_stats()}
 {get_last_updated_line()}
 """.strip()
 
@@ -116,6 +143,11 @@ def image_to_ascii_svg(image_path, output_path="output.svg", new_width=100):
 
     total_width = svg_width + sidebar_width + 2 * PADDING
     total_height = svg_height + 2 * PADDING
+
+    # Find indices for linkable sections
+    portfolio_index = next((i for i, text in enumerate(info_lines) if 'Portfolio' in text), -1)
+    contact_header_index = next((i for i, text in enumerate(info_lines) if 'Contact' in text), -1)
+    stats_header_index = next((i for i, text in enumerate(info_lines) if 'Stats' in text), -1)
 
     # Start SVG
     svg_lines = []
@@ -195,7 +227,7 @@ def image_to_ascii_svg(image_path, output_path="output.svg", new_width=100):
                 value_part = ""
 
             # Using tspans for different colors. `white-space: pre` preserves dot spacing.
-            svg_line = (
+            svg_text_line = (
                 f'<text x="{info_x}" y="{y_pos}" font-size="{info_font_size}px" text-anchor="start" style="white-space: pre;">'
                 f'<tspan fill="white">{html.escape(bullet_part)}</tspan>'
                 f'<tspan fill="orange">{html.escape(key_part)}</tspan>'
@@ -203,6 +235,30 @@ def image_to_ascii_svg(image_path, output_path="output.svg", new_width=100):
                 f'<tspan fill="lime">{html.escape(value_part)}</tspan>'
                 f'</text>'
             )
+
+            url = None
+            key_text = key_part.strip().rstrip(':')
+            value_text = value_part.strip()
+
+            if i == portfolio_index:
+                url = value_text
+            elif contact_header_index != -1 and stats_header_index != -1 and contact_header_index < i < stats_header_index:
+                if key_text == "Email":
+                    url = f"mailto:{value_text}"
+                elif key_text == "Linkedin":
+                    url = f"https://www.linkedin.com/{value_text}"
+                elif key_text == "Instagram":
+                    url = f"https://www.instagram.com/{value_text.lstrip('@')}"
+                elif key_text == "Discord":
+                    url = "https://discord.com/users/anga205"
+                elif key_text == "Reddit":
+                    url = f"https://www.reddit.com/{value_text}"
+
+            if url:
+                svg_line = f'<a href="{url}" target="_blank">{svg_text_line}</a>'
+            else:
+                svg_line = svg_text_line
+            
             svg_lines.append(svg_line)
         else:
             # Default white line for separators and headers
