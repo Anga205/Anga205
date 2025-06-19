@@ -182,7 +182,7 @@ def image_to_ascii_svg(image_path, output_path="output.svg", new_width=100):
                 xpos = x * FONT_SIZE + PADDING
                 ypos = y * FONT_SIZE + PADDING
                 svg_lines.append(
-                    f'<text x="{xpos}" y="{ypos}" fill="{fill}" font-size="{FONT_SIZE}px" text-anchor="middle">{char}</text>'
+                    f'<text x="{xpos}" y="{ypos}" fill="{fill}" font-size="{FONT_SIZE}px" text-anchor="middle" font-weight="bold">{html.escape(char)}</text>'
                 )
 
     # Render INFO block
