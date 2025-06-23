@@ -6,7 +6,7 @@ import html
 from leetcode_functions import get_leetcode_solves, get_leetcode_ranking
 
 # ASCII characters from darkest to lightest
-ASCII_CHARS = "@%#*+=-:. "
+ASCII_CHARS = """$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/|)(1}{][?-_+~><i!lI;:,",^`'. """
 FONT_SIZE = 10  # For ASCII characters only
 
 # INFO block: 20 lines, separated by \n
