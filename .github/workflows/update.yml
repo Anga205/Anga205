@@ -22,7 +22,7 @@ jobs:
       - name: Update README file
         env:
           PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        run: python asciiart.py profile_picture.png 50 image.svg
+        run: python asciiart.py profile_picture.png 30 image.svg
       - name: Commit
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
