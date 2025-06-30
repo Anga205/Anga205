@@ -154,23 +154,60 @@ def image_to_ascii_svg(image_path, output_path="output.svg", new_width=100):
     svg_lines.append(
         f'<svg xmlns="http://www.w3.org/2000/svg" '
         f'width="{total_width}" height="{total_height}" '
-        f'viewBox="0 0 {total_width} {total_height}" '
-        f'style="background:#171717">'
+        f'viewBox="0 0 {total_width} {total_height}">'
+    )
+
+    # Style for both blocks, including light/dark mode support
+    svg_lines.append(
+        f'''<style>
+            :root {{
+                --bg-color: #171717;
+                --border-color: white;
+                --text-color: white;
+                --key-color: orange;
+                --value-color: lime;
+                --user1-color: #D8B4FE;
+                --user2-color: white;
+                --user3-color: #FCA5A5;
+            }}
+            @media (prefers-color-scheme: light) {{
+                :root {{
+                    --bg-color: #FFFFFF;
+                    --border-color: black;
+                    --text-color: black;
+                    --key-color: #D97706;
+                    --value-color: #166534;
+                    --user1-color: #581C87;
+                    --user2-color: black;
+                    --user3-color: #7F1D1D;
+                }}
+            }}
+            .container {{
+                font-family: monospace;
+                dominant-baseline: middle;
+            }}
+            .background {{
+                fill: var(--bg-color);
+                stroke: var(--border-color);
+                stroke-width: {BORDER_WIDTH};
+            }}
+            .text-main {{ fill: var(--text-color); }}
+            .text-key {{ fill: var(--key-color); }}
+            .text-value {{ fill: var(--value-color); }}
+            .text-user1 {{ fill: var(--user1-color); }}
+            .text-user2 {{ fill: var(--user2-color); }}
+            .text-user3 {{ fill: var(--user3-color); }}
+        </style>'''
     )
 
     # Add border and background
     svg_lines.append(
-        f'<rect x="{PADDING/2}" y="{PADDING/2}" width="{total_width - PADDING}" height="{total_height - PADDING}" '
-        f'rx="{CORNER_RADIUS}" ry="{CORNER_RADIUS}" '
-        f'fill="#171717" stroke="white" stroke-width="{BORDER_WIDTH}"/>'
+        f'<rect class="background" x="{PADDING/2}" y="{PADDING/2}" width="{total_width - PADDING}" height="{total_height - PADDING}" '
+        f'rx="{CORNER_RADIUS}" ry="{CORNER_RADIUS}"/>'
     )
 
-    # Style for both blocks
-    svg_lines.append(
-        f'<style>'
-        f'text {{ font-family: monospace; dominant-baseline: middle; }}'
-        f'</style>'
-    )
+    # Group for container styles
+    svg_lines.append(f'<g class="container">')
 
     # Render ASCII Art
     for y in range(height):
@@ -178,7 +215,8 @@ def image_to_ascii_svg(image_path, output_path="output.svg", new_width=100):
             r, g, b, a = pixels[x, y]
             char = pixel_to_ascii(r, g, b, a)
             if char != " ":
-                fill = f"rgb({r},{g},{b})" if a != 0 else "rgb(0,0,0)"
+                # ASCII art colors are from the image, so they don't need theme variables
+                fill = f"rgb({r},{g},{b})" if a != 0 else "transparent"
                 xpos = x * FONT_SIZE + PADDING
                 ypos = y * FONT_SIZE + PADDING
                 svg_lines.append(
@@ -198,14 +236,13 @@ def image_to_ascii_svg(image_path, output_path="output.svg", new_width=100):
             part3 = line[at_index+1:]
             svg_line = (
             f'<text x="{info_x}" y="{y_pos}" font-size="{info_font_size}px" text-anchor="start">'
-            f'<tspan fill="#800080">{html.escape(part1)}</tspan>'  # Light Purple
-            f'<tspan fill="white">{html.escape(part2)}</tspan>'
-            f'<tspan fill="maroon">{html.escape(part3)}</tspan>'
+            f'<tspan class="text-user1">{html.escape(part1)}</tspan>'
+            f'<tspan class="text-user2">{html.escape(part2)}</tspan>'
+            f'<tspan class="text-user3">{html.escape(part3)}</tspan>'
             f'</text>'
             )
             svg_lines.append(svg_line)
         elif '•' in line and ':' in line:
-            # Colored line using tspans
             colon_index = line.find(':')
             
             bullet_part = line[:1]
@@ -213,7 +250,6 @@ def image_to_ascii_svg(image_path, output_path="output.svg", new_width=100):
             rest = line[colon_index + 1:]
 
             value_start_index = -1
-            # Find the start of the value (first non-dot/space character)
             for j, char in enumerate(rest):
                 if char not in ['.', ' ']:
                     value_start_index = j
@@ -226,13 +262,12 @@ def image_to_ascii_svg(image_path, output_path="output.svg", new_width=100):
                 dots_part = rest
                 value_part = ""
 
-            # Using tspans for different colors. `white-space: pre` preserves dot spacing.
             svg_text_line = (
                 f'<text x="{info_x}" y="{y_pos}" font-size="{info_font_size}px" text-anchor="start" style="white-space: pre;">'
-                f'<tspan fill="white">{html.escape(bullet_part)}</tspan>'
-                f'<tspan fill="orange">{html.escape(key_part)}</tspan>'
-                f'<tspan fill="white">{html.escape(dots_part)}</tspan>'
-                f'<tspan fill="lime">{html.escape(value_part)}</tspan>'
+                f'<tspan class="text-main">{html.escape(bullet_part)}</tspan>'
+                f'<tspan class="text-key">{html.escape(key_part)}</tspan>'
+                f'<tspan class="text-main">{html.escape(dots_part)}</tspan>'
+                f'<tspan class="text-value">{html.escape(value_part)}</tspan>'
                 f'</text>'
             )
 
@@ -261,11 +296,11 @@ def image_to_ascii_svg(image_path, output_path="output.svg", new_width=100):
             
             svg_lines.append(svg_line)
         else:
-            # Default white line for separators and headers
             svg_lines.append(
-                f'<text x="{info_x}" y="{y_pos}" fill="white" font-size="{info_font_size}px" text-anchor="start">{html.escape(line)}</text>'
+                f'<text x="{info_x}" y="{y_pos}" class="text-main" font-size="{info_font_size}px" text-anchor="start">{html.escape(line)}</text>'
             )
 
+    svg_lines.append('</g>') # Close container group
     svg_lines.append('</svg>')
 
     # Write to file

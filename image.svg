@@ -1,6 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="822.5" height="500" viewBox="0 0 822.5 500" style="background:#171717">
-<rect x="2.5" y="2.5" width="817.5" height="495" rx="5" ry="5" fill="#171717" stroke="white" stroke-width="1"/>
-<style>text { font-family: monospace; dominant-baseline: middle; }</style>
+<svg xmlns="http://www.w3.org/2000/svg" width="822.5" height="500" viewBox="0 0 822.5 500">
+<style>
+            :root {
+                --bg-color: #171717;
+                --border-color: white;
+                --text-color: white;
+                --key-color: orange;
+                --value-color: lime;
+                --user1-color: #D8B4FE;
+                --user2-color: white;
+                --user3-color: #FCA5A5;
+            }
+            @media (prefers-color-scheme: light) {
+                :root {
+                    --bg-color: #FFFFFF;
+                    --border-color: black;
+                    --text-color: black;
+                    --key-color: #D97706;
+                    --value-color: #166534;
+                    --user1-color: #581C87;
+                    --user2-color: black;
+                    --user3-color: #7F1D1D;
+                }
+            }
+            .container {
+                font-family: monospace;
+                dominant-baseline: middle;
+            }
+            .background {
+                fill: var(--bg-color);
+                stroke: var(--border-color);
+                stroke-width: 1;
+            }
+            .text-main { fill: var(--text-color); }
+            .text-key { fill: var(--key-color); }
+            .text-value { fill: var(--value-color); }
+            .text-user1 { fill: var(--user1-color); }
+            .text-user2 { fill: var(--user2-color); }
+            .text-user3 { fill: var(--user3-color); }
+        </style>
+<rect class="background" x="2.5" y="2.5" width="817.5" height="495" rx="5" ry="5"/>
+<g class="container">
 <text x="125" y="15" fill="rgb(17,17,68)" font-size="10px" text-anchor="middle" font-weight="bold">&amp;</text>
 <text x="135" y="15" fill="rgb(18,18,57)" font-size="10px" text-anchor="middle" font-weight="bold">&amp;</text>
 <text x="145" y="15" fill="rgb(7,7,49)" font-size="10px" text-anchor="middle" font-weight="bold">B</text>
@@ -1060,32 +1099,33 @@
 <text x="275" y="485" fill="rgb(107,12,70)" font-size="10px" text-anchor="middle" font-weight="bold">h</text>
 <text x="285" y="485" fill="rgb(107,11,69)" font-size="10px" text-anchor="middle" font-weight="bold">h</text>
 <text x="295" y="485" fill="rgb(109,4,65)" font-size="10px" text-anchor="middle" font-weight="bold">a</text>
-<text x="325" y="13" font-size="13.125px" text-anchor="start"><tspan fill="#800080">Angad</tspan><tspan fill="white">@</tspan><tspan fill="maroon">Bhalla</tspan></text>
-<text x="325" y="31" fill="white" font-size="13.125px" text-anchor="start">————————————————————————————————————————————————————————————</text>
-<text x="325" y="48" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> OS:</tspan><tspan fill="white"> .............................</tspan><tspan fill="lime">Debian 12, Android, Linux</tspan></text>
-<text x="325" y="66" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Uptime:</tspan><tspan fill="white">.........................</tspan><tspan fill="lime">20 years, 1 months, 3 days</tspan></text>
-<text x="325" y="83" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> IDE:</tspan><tspan fill="white"> ...................................</tspan><tspan fill="lime">Visual Studio Code</tspan></text>
-<a href="https://anga.codes" target="_blank"><text x="325" y="101" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Portfolio:</tspan><tspan fill="white"> .............................</tspan><tspan fill="lime">https://anga.codes</tspan></text></a>
-<text x="325" y="118" fill="white" font-size="13.125px" text-anchor="start"></text>
-<text x="325" y="136" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Languages.Programming:</tspan><tspan fill="white"> ......</tspan><tspan fill="lime">Python, C, JavaScript, GoLang</tspan></text>
-<text x="325" y="153" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Languages.Real:</tspan><tspan fill="white"> ............................</tspan><tspan fill="lime">English, Hindi</tspan></text>
-<text x="325" y="171" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Languages.Markup:</tspan><tspan fill="white"> ...................</tspan><tspan fill="lime">Markdown, HTML, LaTeX</tspan></text>
-<text x="325" y="188" fill="white" font-size="13.125px" text-anchor="start"></text>
-<text x="325" y="206" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Web.Frameworks:</tspan><tspan fill="white"> ...........</tspan><tspan fill="lime">ReactJS, SolidJS, Svelte, VueJS</tspan></text>
-<text x="325" y="223" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Web.Tools:</tspan><tspan fill="white"> .....................</tspan><tspan fill="lime">Vite, Next.js, TailwindCSS</tspan></text>
-<text x="325" y="241" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Backend.Frameworks:</tspan><tspan fill="white"> .......</tspan><tspan fill="lime">Gin, FastAPI, Django, ExpressJS</tspan></text>
-<text x="325" y="258" fill="white" font-size="13.125px" text-anchor="start"></text>
-<text x="325" y="276" fill="white" font-size="13.125px" text-anchor="start">————————————————————————— Contacts —————————————————————————</text>
-<a href="mailto:sayhi@angadbhalla.com" target="_blank"><text x="325" y="293" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Email:</tspan><tspan fill="white"> ..............................</tspan><tspan fill="lime">sayhi@angadbhalla.com</tspan></text></a>
-<a href="https://www.linkedin.com/https://linkedin.com/in/anga205" target="_blank"><text x="325" y="311" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Linkedin:</tspan><tspan fill="white"> .................</tspan><tspan fill="lime">https://linkedin.com/in/anga205</tspan></text></a>
-<a href="https://www.instagram.com/_anga205" target="_blank"><text x="325" y="328" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Instagram:</tspan><tspan fill="white"> ......................................</tspan><tspan fill="lime">@_anga205</tspan></text></a>
-<a href="https://discord.com/users/anga205" target="_blank"><text x="325" y="346" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Discord:</tspan><tspan fill="white"> .........................................</tspan><tspan fill="lime">@anga205</tspan></text></a>
-<a href="https://www.reddit.com/u/anga205" target="_blank"><text x="325" y="363" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Reddit:</tspan><tspan fill="white"> .........................................</tspan><tspan fill="lime">u/anga205</tspan></text></a>
-<text x="325" y="381" fill="white" font-size="13.125px" text-anchor="start"></text>
-<text x="325" y="398" fill="white" font-size="13.125px" text-anchor="start">—————————————————————————— Stats ———————————————————————————</text>
-<text x="325" y="416" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Github Contributions:</tspan><tspan fill="white"> .................................</tspan><tspan fill="lime">955</tspan></text>
-<text x="325" y="433" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Github Repositories:</tspan><tspan fill="white"> ...................................</tspan><tspan fill="lime">24</tspan></text>
-<text x="325" y="451" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> LeetCode Solves:</tspan><tspan fill="white"> ......................................</tspan><tspan fill="lime">271</tspan></text>
-<text x="325" y="468" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> LeetCode Ranking:</tspan><tspan fill="white"> .................................</tspan><tspan fill="lime">436,867</tspan></text>
-<text x="325" y="486" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan fill="white">•</tspan><tspan fill="orange"> Last Updated:</tspan><tspan fill="white"> ......................</tspan><tspan fill="lime">30-06-2025 03:50:04 PM</tspan></text>
+<text x="325" y="13" font-size="13.125px" text-anchor="start"><tspan class="text-user1">Angad</tspan><tspan class="text-user2">@</tspan><tspan class="text-user3">Bhalla</tspan></text>
+<text x="325" y="31" class="text-main" font-size="13.125px" text-anchor="start">————————————————————————————————————————————————————————————</text>
+<text x="325" y="48" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> OS:</tspan><tspan class="text-main"> .............................</tspan><tspan class="text-value">Debian 12, Android, Linux</tspan></text>
+<text x="325" y="66" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Uptime:</tspan><tspan class="text-main">.........................</tspan><tspan class="text-value">20 years, 1 months, 3 days</tspan></text>
+<text x="325" y="83" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> IDE:</tspan><tspan class="text-main"> ...................................</tspan><tspan class="text-value">Visual Studio Code</tspan></text>
+<a href="https://anga.codes" target="_blank"><text x="325" y="101" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Portfolio:</tspan><tspan class="text-main"> .............................</tspan><tspan class="text-value">https://anga.codes</tspan></text></a>
+<text x="325" y="118" class="text-main" font-size="13.125px" text-anchor="start"></text>
+<text x="325" y="136" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Languages.Programming:</tspan><tspan class="text-main"> ......</tspan><tspan class="text-value">Python, C, JavaScript, GoLang</tspan></text>
+<text x="325" y="153" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Languages.Real:</tspan><tspan class="text-main"> ............................</tspan><tspan class="text-value">English, Hindi</tspan></text>
+<text x="325" y="171" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Languages.Markup:</tspan><tspan class="text-main"> ...................</tspan><tspan class="text-value">Markdown, HTML, LaTeX</tspan></text>
+<text x="325" y="188" class="text-main" font-size="13.125px" text-anchor="start"></text>
+<text x="325" y="206" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Web.Frameworks:</tspan><tspan class="text-main"> ...........</tspan><tspan class="text-value">ReactJS, SolidJS, Svelte, VueJS</tspan></text>
+<text x="325" y="223" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Web.Tools:</tspan><tspan class="text-main"> .....................</tspan><tspan class="text-value">Vite, Next.js, TailwindCSS</tspan></text>
+<text x="325" y="241" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Backend.Frameworks:</tspan><tspan class="text-main"> .......</tspan><tspan class="text-value">Gin, FastAPI, Django, ExpressJS</tspan></text>
+<text x="325" y="258" class="text-main" font-size="13.125px" text-anchor="start"></text>
+<text x="325" y="276" class="text-main" font-size="13.125px" text-anchor="start">————————————————————————— Contacts —————————————————————————</text>
+<a href="mailto:sayhi@angadbhalla.com" target="_blank"><text x="325" y="293" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Email:</tspan><tspan class="text-main"> ..............................</tspan><tspan class="text-value">sayhi@angadbhalla.com</tspan></text></a>
+<a href="https://www.linkedin.com/https://linkedin.com/in/anga205" target="_blank"><text x="325" y="311" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Linkedin:</tspan><tspan class="text-main"> .................</tspan><tspan class="text-value">https://linkedin.com/in/anga205</tspan></text></a>
+<a href="https://www.instagram.com/_anga205" target="_blank"><text x="325" y="328" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Instagram:</tspan><tspan class="text-main"> ......................................</tspan><tspan class="text-value">@_anga205</tspan></text></a>
+<a href="https://discord.com/users/anga205" target="_blank"><text x="325" y="346" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Discord:</tspan><tspan class="text-main"> .........................................</tspan><tspan class="text-value">@anga205</tspan></text></a>
+<a href="https://www.reddit.com/u/anga205" target="_blank"><text x="325" y="363" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Reddit:</tspan><tspan class="text-main"> .........................................</tspan><tspan class="text-value">u/anga205</tspan></text></a>
+<text x="325" y="381" class="text-main" font-size="13.125px" text-anchor="start"></text>
+<text x="325" y="398" class="text-main" font-size="13.125px" text-anchor="start">—————————————————————————— Stats ———————————————————————————</text>
+<text x="325" y="416" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Github Contributions:</tspan><tspan class="text-main"> .................................</tspan><tspan class="text-value">955</tspan></text>
+<text x="325" y="433" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Github Repositories:</tspan><tspan class="text-main"> ...................................</tspan><tspan class="text-value">24</tspan></text>
+<text x="325" y="451" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> LeetCode Solves:</tspan><tspan class="text-main"> ......................................</tspan><tspan class="text-value">271</tspan></text>
+<text x="325" y="468" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> LeetCode Ranking:</tspan><tspan class="text-main"> .................................</tspan><tspan class="text-value">419,644</tspan></text>
+<text x="325" y="486" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Last Updated:</tspan><tspan class="text-main"> ......................</tspan><tspan class="text-value">30-06-2025 04:19:35 PM</tspan></text>
+</g>
 </svg>
