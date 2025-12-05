@@ -1,7 +1,7 @@
 import requests
 import json
 
-data = requests.get ("https://leetcode-api-faisalshohag.vercel.app/Anga205")
+data = requests.get ("https://leetcode-api-faisalshohag.anga.codes/Anga205")
 
 data = json.loads(data.text)
 
