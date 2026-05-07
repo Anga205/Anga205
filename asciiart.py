@@ -3,6 +3,7 @@ import sys
 from datetime import datetime, timezone, timedelta
 from github_functions import get_total_contributions, get_total_repos
 import html
+from dateutil.relativedelta import relativedelta
 from leetcode_functions import get_leetcode_solves, get_leetcode_ranking
 
 # ASCII characters from darkest to lightest
@@ -13,15 +14,11 @@ FONT_SIZE = 10  # For ASCII characters only
 def get_age_line(timestamp):
     now = datetime.now(timezone.utc)
     then = datetime.fromtimestamp(timestamp, tz=timezone.utc)
-    delta = now - then
-    days = delta.days
-    years, rem_days = divmod(days, 365)
-    months, days = divmod(rem_days, 30)
-    age = f"{years} years, {months} months, {days} days"
+    diff = relativedelta(now, then)
+    age = f"{diff.years} years, {diff.months} months, {diff.days} days"
     output = "• Uptime:"
-    while (len(output)+ len(age)) < 60:
-        output += "."
-    return f"{output}{age}"
+    padding = "." * (60 - len(output) - len(age))
+    return f"{output}{padding}{age}"
 
 def get_last_updated_line():
     ist_timezone = timezone(timedelta(hours=5, minutes=30))
