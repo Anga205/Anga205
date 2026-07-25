@@ -16,7 +16,7 @@ def get_age_line(timestamp):
     then = datetime.fromtimestamp(timestamp, tz=timezone.utc)
     diff = relativedelta(now, then)
     age = f"{diff.years} years, {diff.months} months, {diff.days} days"
-    output = "• Uptime:"
+    output = "• Age:"
     padding = "." * (60 - len(output) - len(age))
     return f"{output}{padding}{age}"
 
