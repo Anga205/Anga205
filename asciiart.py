@@ -66,7 +66,7 @@ Angad@Bhalla
 • OS: .............................Debian 12, Android, Linux
 {get_age_line(1117650600)}
 • IDE: ...................................Visual Studio Code
-• Portfolio: .............................https://anga.codes
+• Portfolio: ........................https://angadbhalla.com
 
 • Languages.Programming: ......Python, C, JavaScript, GoLang
 • Languages.Real: ............................English, Hindi
