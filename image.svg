@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="822.5" height="500" viewBox="0 0 822.5 500">
+<svg xmlns="http://www.w3.org/2000/svg" width="1011.5" height="500" viewBox="0 0 1011.5 500">
 <style>
             :root {
                 --bg-color: #171717;
@@ -38,7 +38,7 @@
             .text-user2 { fill: var(--user2-color); }
             .text-user3 { fill: var(--user3-color); }
         </style>
-<rect class="background" x="2.5" y="2.5" width="817.5" height="495" rx="5" ry="5"/>
+<rect class="background" x="2.5" y="2.5" width="1006.5" height="495" rx="5" ry="5"/>
 <g class="container">
 <text x="125" y="15" fill="rgb(17,17,68)" font-size="10px" text-anchor="middle" font-weight="bold">&amp;</text>
 <text x="135" y="15" fill="rgb(18,18,57)" font-size="10px" text-anchor="middle" font-weight="bold">&amp;</text>
@@ -1099,33 +1099,25 @@
 <text x="275" y="485" fill="rgb(107,12,70)" font-size="10px" text-anchor="middle" font-weight="bold">h</text>
 <text x="285" y="485" fill="rgb(107,11,69)" font-size="10px" text-anchor="middle" font-weight="bold">h</text>
 <text x="295" y="485" fill="rgb(109,4,65)" font-size="10px" text-anchor="middle" font-weight="bold">a</text>
-<text x="325" y="13" font-size="13.125px" text-anchor="start"><tspan class="text-user1">Angad</tspan><tspan class="text-user2">@</tspan><tspan class="text-user3">Bhalla</tspan></text>
-<text x="325" y="31" class="text-main" font-size="13.125px" text-anchor="start">————————————————————————————————————————————————————————————</text>
-<text x="325" y="48" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> OS:</tspan><tspan class="text-main"> .............................</tspan><tspan class="text-value">Debian 12, Android, Linux</tspan></text>
-<text x="325" y="66" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Age:</tspan><tspan class="text-main">...........................</tspan><tspan class="text-value">21 years, 5 months, 11 days</tspan></text>
-<text x="325" y="83" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> IDE:</tspan><tspan class="text-main"> ...................................</tspan><tspan class="text-value">Visual Studio Code</tspan></text>
-<a href="https://angadbhalla.com" target="_blank"><text x="325" y="101" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Portfolio:</tspan><tspan class="text-main"> ........................</tspan><tspan class="text-value">https://angadbhalla.com</tspan></text></a>
-<text x="325" y="118" class="text-main" font-size="13.125px" text-anchor="start"></text>
-<text x="325" y="136" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Languages.Programming:</tspan><tspan class="text-main"> ......</tspan><tspan class="text-value">Python, C, JavaScript, GoLang</tspan></text>
-<text x="325" y="153" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Languages.Real:</tspan><tspan class="text-main"> ............................</tspan><tspan class="text-value">English, Hindi</tspan></text>
-<text x="325" y="171" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Languages.Markup:</tspan><tspan class="text-main"> ...................</tspan><tspan class="text-value">Markdown, HTML, LaTeX</tspan></text>
-<text x="325" y="188" class="text-main" font-size="13.125px" text-anchor="start"></text>
-<text x="325" y="206" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Web.Frameworks:</tspan><tspan class="text-main"> ...........</tspan><tspan class="text-value">ReactJS, SolidJS, Svelte, VueJS</tspan></text>
-<text x="325" y="223" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Web.Tools:</tspan><tspan class="text-main"> .....................</tspan><tspan class="text-value">Vite, Next.js, TailwindCSS</tspan></text>
-<text x="325" y="241" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Backend.Frameworks:</tspan><tspan class="text-main"> .......</tspan><tspan class="text-value">Gin, FastAPI, Django, ExpressJS</tspan></text>
-<text x="325" y="258" class="text-main" font-size="13.125px" text-anchor="start"></text>
-<text x="325" y="276" class="text-main" font-size="13.125px" text-anchor="start">————————————————————————— Contacts —————————————————————————</text>
-<a href="mailto:sayhi@angadbhalla.com" target="_blank"><text x="325" y="293" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Email:</tspan><tspan class="text-main"> ..............................</tspan><tspan class="text-value">sayhi@angadbhalla.com</tspan></text></a>
-<a href="https://www.linkedin.com/https://linkedin.com/in/anga205" target="_blank"><text x="325" y="311" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Linkedin:</tspan><tspan class="text-main"> .................</tspan><tspan class="text-value">https://linkedin.com/in/anga205</tspan></text></a>
-<a href="https://www.instagram.com/_anga205" target="_blank"><text x="325" y="328" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Instagram:</tspan><tspan class="text-main"> ......................................</tspan><tspan class="text-value">@_anga205</tspan></text></a>
-<a href="https://discord.com/users/anga205" target="_blank"><text x="325" y="346" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Discord:</tspan><tspan class="text-main"> .........................................</tspan><tspan class="text-value">@anga205</tspan></text></a>
-<a href="https://www.reddit.com/u/anga205" target="_blank"><text x="325" y="363" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Reddit:</tspan><tspan class="text-main"> .........................................</tspan><tspan class="text-value">u/anga205</tspan></text></a>
-<text x="325" y="381" class="text-main" font-size="13.125px" text-anchor="start"></text>
-<text x="325" y="398" class="text-main" font-size="13.125px" text-anchor="start">—————————————————————————— Stats ———————————————————————————</text>
-<text x="325" y="416" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Github Contributions:</tspan><tspan class="text-main"> ...............................</tspan><tspan class="text-value">1,869</tspan></text>
-<text x="325" y="433" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Github Repositories:</tspan><tspan class="text-main"> ...................................</tspan><tspan class="text-value">54</tspan></text>
-<text x="325" y="451" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> LeetCode Solves:</tspan><tspan class="text-main"> ....................................</tspan><tspan class="text-value">1,353</tspan></text>
-<text x="325" y="468" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> LeetCode Ranking:</tspan><tspan class="text-main"> ..................................</tspan><tspan class="text-value">12,565</tspan></text>
-<text x="325" y="486" font-size="13.125px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Last Updated:</tspan><tspan class="text-main"> ......................</tspan><tspan class="text-value">13-11-2026 09:28:15 AM</tspan></text>
+<text x="325" y="17" font-size="18.375px" text-anchor="start"><tspan class="text-user1">Angad</tspan><tspan class="text-user2">@</tspan><tspan class="text-user3">Bhalla</tspan></text>
+<text x="325" y="41" class="text-main" font-size="18.375px" text-anchor="start">————————————————————————————————————————————————————————————</text>
+<text x="325" y="66" font-size="18.375px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> OS:</tspan><tspan class="text-main"> .............................</tspan><tspan class="text-value">Debian 12, Android, Linux</tspan></text>
+<text x="325" y="90" font-size="18.375px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Age:</tspan><tspan class="text-main">...........................</tspan><tspan class="text-value">21 years, 5 months, 11 days</tspan></text>
+<text x="325" y="115" font-size="18.375px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> IDE:</tspan><tspan class="text-main"> ...................................</tspan><tspan class="text-value">Visual Studio Code</tspan></text>
+<a href="https://angadbhalla.com" target="_blank"><text x="325" y="139" font-size="18.375px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Portfolio:</tspan><tspan class="text-main"> ........................</tspan><tspan class="text-value">https://angadbhalla.com</tspan></text></a>
+<text x="325" y="164" class="text-main" font-size="18.375px" text-anchor="start"></text>
+<text x="325" y="188" class="text-main" font-size="18.375px" text-anchor="start">————————————————————————— Contacts —————————————————————————</text>
+<a href="mailto:sayhi@angadbhalla.com" target="_blank"><text x="325" y="213" font-size="18.375px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Email:</tspan><tspan class="text-main"> ..............................</tspan><tspan class="text-value">sayhi@angadbhalla.com</tspan></text></a>
+<a href="https://www.linkedin.com/https://linkedin.com/in/anga205" target="_blank"><text x="325" y="237" font-size="18.375px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Linkedin:</tspan><tspan class="text-main"> .................</tspan><tspan class="text-value">https://linkedin.com/in/anga205</tspan></text></a>
+<a href="https://www.instagram.com/_anga205" target="_blank"><text x="325" y="262" font-size="18.375px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Instagram:</tspan><tspan class="text-main"> ......................................</tspan><tspan class="text-value">@_anga205</tspan></text></a>
+<a href="https://discord.com/users/anga205" target="_blank"><text x="325" y="286" font-size="18.375px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Discord:</tspan><tspan class="text-main"> .........................................</tspan><tspan class="text-value">@anga205</tspan></text></a>
+<a href="https://www.reddit.com/u/anga205" target="_blank"><text x="325" y="311" font-size="18.375px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Reddit:</tspan><tspan class="text-main"> .........................................</tspan><tspan class="text-value">u/anga205</tspan></text></a>
+<text x="325" y="335" class="text-main" font-size="18.375px" text-anchor="start"></text>
+<text x="325" y="360" class="text-main" font-size="18.375px" text-anchor="start">—————————————————————————— Stats ———————————————————————————</text>
+<text x="325" y="384" font-size="18.375px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Github Contributions:</tspan><tspan class="text-main"> ...............................</tspan><tspan class="text-value">1,870</tspan></text>
+<text x="325" y="409" font-size="18.375px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Github Repositories:</tspan><tspan class="text-main"> ...................................</tspan><tspan class="text-value">54</tspan></text>
+<text x="325" y="433" font-size="18.375px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> LeetCode Solves:</tspan><tspan class="text-main"> ....................................</tspan><tspan class="text-value">1,354</tspan></text>
+<text x="325" y="458" font-size="18.375px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> LeetCode Ranking:</tspan><tspan class="text-main"> ..................................</tspan><tspan class="text-value">12,532</tspan></text>
+<text x="325" y="482" font-size="18.375px" text-anchor="start" style="white-space: pre;"><tspan class="text-main">•</tspan><tspan class="text-key"> Last Updated:</tspan><tspan class="text-main"> ......................</tspan><tspan class="text-value">13-11-2026 09:31:23 PM</tspan></text>
 </g>
 </svg>
