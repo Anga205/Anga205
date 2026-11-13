@@ -68,6 +68,14 @@ Angad@Bhalla
 • IDE: ...................................Visual Studio Code
 • Portfolio: ........................https://angadbhalla.com
 
+• Languages.Programming: ......Python, C, JavaScript, GoLang
+• Languages.Real: ............................English, Hindi
+• Languages.Markup: ...................Markdown, HTML, LaTeX
+
+• Web.Frameworks: ...........ReactJS, SolidJS, Svelte, VueJS
+• Web.Tools: .....................Vite, Next.js, TailwindCSS
+• Backend.Frameworks: .......Gin, FastAPI, Django, ExpressJS
+
 ————————————————————————— Contacts —————————————————————————
 • Email: ..............................sayhi@angadbhalla.com
 • Linkedin: .................https://linkedin.com/in/anga205
